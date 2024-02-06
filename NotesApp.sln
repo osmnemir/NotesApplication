@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34018.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NoteCrudAPI", "NoteCrudAPI\NoteCrudAPI.csproj", "{F584D9D5-4292-4FC3-A6C7-28993F48F6E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoteCrudMvc", "NoteCrudMvc\NoteCrudMvc.csproj", "{069570BC-C6BB-415F-9E0A-E4F84AE93C41}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F584D9D5-4292-4FC3-A6C7-28993F48F6E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F584D9D5-4292-4FC3-A6C7-28993F48F6E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F584D9D5-4292-4FC3-A6C7-28993F48F6E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F584D9D5-4292-4FC3-A6C7-28993F48F6E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{069570BC-C6BB-415F-9E0A-E4F84AE93C41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{069570BC-C6BB-415F-9E0A-E4F84AE93C41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{069570BC-C6BB-415F-9E0A-E4F84AE93C41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{069570BC-C6BB-415F-9E0A-E4F84AE93C41}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B3D8EAB9-16E6-439B-8371-F804D65B0DCD}
+	EndGlobalSection
+EndGlobal
