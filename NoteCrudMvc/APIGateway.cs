@@ -171,6 +171,66 @@ namespace NoteCrudMvc
         }
 
 
+        public string Token { get; private set; }
+
+        public void Login(string username, string password)
+        {
+            string loginUrl = "https://localhost:7204/api/Login";
+
+            var loginData = new { UserName = username, Password = password };
+            string json = JsonConvert.SerializeObject(loginData);
+            try
+            {
+                HttpResponseMessage response = httpClient.PostAsync(loginUrl, new StringContent(json, Encoding.UTF8, "application/json")).Result;
+                if (response.IsSuccessStatusCode)
+                {
+                    string result = response.Content.ReadAsStringAsync().Result;
+                    Token = result;
+                }
+                else
+                {
+                    string result = response.Content.ReadAsStringAsync().Result;
+                    throw new Exception("Giriş yapılamadı: " + result);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Giriş yapılamadı: " + ex.Message);
+            }
+        }
+
+        
+
+        public void Register(string username, string email, string password)
+        {
+            // Kayıt olacak API endpoint'i
+            string registerUrl = "https://localhost:7204/api/Register";
+
+            var registerData = new { UserName = username, Email = email, Password = password };
+            string json = JsonConvert.SerializeObject(registerData);
+            try
+            {
+                HttpResponseMessage response = httpClient.PostAsync(registerUrl, new StringContent(json, Encoding.UTF8, "application/json")).Result;
+                if (response.IsSuccessStatusCode)
+                {
+                    string result = response.Content.ReadAsStringAsync().Result;
+                    Console.WriteLine("Kayıt başarıyla tamamlandı.");
+                }
+                else
+                {
+                    string result = response.Content.ReadAsStringAsync().Result;
+                    throw new Exception("Kayıt yapılamadı: " + result);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Kayıt yapılamadı: " + ex.Message);
+            }
+        }
 
     }
 }
+
+
+
+
