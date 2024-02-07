@@ -171,7 +171,6 @@ namespace NoteCrudMvc
         }
 
 
-        public string Token { get; private set; }
 
         public void Login(string username, string password)
         {
@@ -185,7 +184,6 @@ namespace NoteCrudMvc
                 if (response.IsSuccessStatusCode)
                 {
                     string result = response.Content.ReadAsStringAsync().Result;
-                    Token = result;
                 }
                 else
                 {
